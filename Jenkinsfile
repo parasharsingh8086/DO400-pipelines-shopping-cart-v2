@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    parameters {
+        booleanParam(name: "RUN_INTEGRATION_TESTS", defaultValue: true)
+    }
     stages{
         stage('Test'){
             parallel{
